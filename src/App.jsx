@@ -13,7 +13,9 @@ import Auth from './components/Auth';
 import Navbar from './components/Navbar';
 import ErrorBoundary from './components/ErrorBoundary';
 //import BudgetManager from './components/BudgetManager';
+// ####-------BudgetManager me abhi kaaam baaki hai isliye isko abhi comment--------########
 //import RecurringExpenses from './components/RecurringExpenses';
+// ####--------- RecurringExpenses me bhi kaaam baaki cheee ------------ #########
 import LoadingState from './components/LoadingState';
 import OfflineIndicator from './components/OfflineIndicator';
 
