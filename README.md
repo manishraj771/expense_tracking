@@ -155,5 +155,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - [Material-UI](https://mui.com/) for the beautiful components
 - [Supabase](https://supabase.com/) for the backend infrastructure
+-  [Node.js](https://Nodejs.org/)for the backend
 - [React](https://reactjs.org/) for the frontend framework
 - [Vite](https://vitejs.dev/) for the build tool
