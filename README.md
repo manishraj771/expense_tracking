@@ -2,39 +2,42 @@
 
 A modern, full-stack expense tracking application built with React, Material-UI, and Supabase. Track your expenses, visualize spending patterns, and manage your financial data securely.
 
-![Expense Tracker Screenshot](https://i.imgur.com/example.png)
-
 ## Features
-
-- 🔐 **Secure Authentication**
-  - Email & password authentication
-  - Password reset with verification codes
-  - Session management with auto-logout
-  - Secure password requirements
 
 - 💰 **Expense Management**
   - Add, edit, and delete expenses
-  - Categorize expenses
+  - Categorize expenses with custom categories
   - Add descriptions and dates
-  - Filter expenses by date range and category
+  - Import/Export expenses as CSV
+  - Recurring expenses support
 
-- 📊 **Visual Analytics**
+- 📊 **Financial Insights**
   - Category distribution pie chart
   - Monthly spending trends
   - Category-wise breakdowns
   - Total spending insights
+  - Budget tracking and alerts
+
+- 💼 **Budget Management**
+  - Set monthly budgets
+  - Track spending against budget
+  - Visual progress indicators
+  - Over-budget warnings
+  - Remaining budget calculations
+
+- 🔐 **Secure Authentication**
+  - Email & password authentication
+  - Session management
+  - Automatic session timeout
+  - Secure password requirements
+  - Activity logging
 
 - 🎨 **Modern UI/UX**
-  - Responsive design for all devices
+  - Responsive Material Design
   - Dark/Light theme support
-  - Material Design components
-  - Smooth animations and transitions
-
-- 🛡️ **Security Features**
-  - Row Level Security (RLS)
-  - Secure password storage
-  - Protected API endpoints
-  - Activity logging
+  - Interactive charts and graphs
+  - Smooth animations
+  - Mobile-friendly interface
 
 ## Tech Stack
 
@@ -45,10 +48,10 @@ A modern, full-stack expense tracking application built with React, Material-UI,
   - date-fns
   - Vite
 
-- **Backend**
+- **Backend & Database**
   - Supabase
   - PostgreSQL
-  - Row Level Security
+  - Row Level Security (RLS)
   - Real-time subscriptions
 
 ## Getting Started
@@ -83,46 +86,58 @@ A modern, full-stack expense tracking application built with React, Material-UI,
    npm run dev
    ```
 
-### Database Setup
-
-The application requires the following tables in your Supabase database:
-
-1. `expenses` - Stores user expenses
-2. `auth_logs` - Tracks authentication events
-
-Run the provided migration files in the `supabase/migrations` directory to set up the database schema and security policies.
-
 ## Project Structure
 
 ```
 expense-tracker/
 ├── src/
-│   ├── components/         # React components
-│   │   ├── Auth.jsx       # Authentication component
+│   ├── components/           # React components
+│   │   ├── Auth.jsx         # Authentication component
+│   │   ├── BudgetManager.jsx
 │   │   ├── ExpenseForm.jsx
 │   │   ├── ExpenseList.jsx
 │   │   ├── ExpenseInsights.jsx
-│   │   └── Navbar.jsx
-│   ├── lib/               # Utility functions
-│   │   └── supabase.js    # Supabase client
-│   └── App.jsx            # Main application component
+│   │   ├── LoadingState.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── OfflineIndicator.jsx
+│   │   └── RecurringExpenses.jsx
+│   ├── lib/                 # Utility functions
+│   │   └── supabase.js      # Supabase client
+│   └── App.jsx              # Main application component
 ├── supabase/
-│   └── migrations/        # Database migrations
-└── public/               # Static assets
+│   └── migrations/          # Database migrations
+└── public/                  # Static assets
 ```
 
-## Security
+## Features in Detail
 
-- Row Level Security (RLS) ensures users can only access their own data
-- Password requirements:
-  - Minimum 8 characters
-  - At least one uppercase letter
-  - At least one lowercase letter
-  - At least one number
-  - At least one special character
-- Session timeout after 30 minutes of inactivity
-- Secure password reset with verification codes
-- All authentication events are logged
+### Expense Management
+- Add one-time or recurring expenses
+- Categorize expenses for better organization
+- Filter and search expenses
+- Import/Export functionality for data backup
+- Bulk operations support
+
+### Budget Tracking
+- Set and manage monthly budgets
+- Visual progress indicators
+- Category-wise budget allocation
+- Overspending alerts
+- Monthly rollover tracking
+
+### Data Visualization
+- Interactive pie charts for category distribution
+- Monthly trend analysis
+- Spending patterns visualization
+- Budget vs actual comparison
+- Category-wise breakdowns
+
+### Security Features
+- Row Level Security (RLS)
+- Secure password storage
+- Session management
+- Activity logging
+- Data encryption
 
 ## Contributing
 
@@ -142,6 +157,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Supabase](https://supabase.com/) for the backend infrastructure
 - [React](https://reactjs.org/) for the frontend framework
 - [Vite](https://vitejs.dev/) for the build tool
-
-## Support
-
